@@ -1,8 +1,17 @@
 package lambdas;
 
+import java.util.function.BinaryOperator;
+
 public class CalculoTest2 {
     public static void main(String[] args) {
         //funções anonimas(sem nomes)
+
+        //BinaryOperator(interface funcional) representa um a operação com os dois valores do mesmo tipo, produzindo um resultado igual a do operandos
+        BinaryOperator<Double> calculator = (a, b) -> {
+            //como essa função tem a,b como parametro e é obrigada a retornar um double.Eu preciso colocar o return
+            //se eu colocar mais parametros do que foi declarado na método na interface, java dá um erro.
+            return a + b;
+        };
 
         //arrow function
         Calculo calc = (a,b) -> {
