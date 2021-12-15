@@ -1,0 +1,6 @@
+Supplien(nada > T) = interface que não recebe um parametro e retorna algum valor
+Consumer(T > nada) = recebe um parametro mas não retorna nada
+UnaryOperatior(T > T) = recebe um valor como parametro e retorna ele mesmo em seguida
+BinaryOperation(T,T > T) = recebe dois valores como parametro com o mesmo tipo e retorna o mesmo tipo no final.Usado muito para fazer uma soma por exemplo.
+Function(S > T) = recebe um valor de um tipo como parametro e retorna um valor de outro tipo.
+Predicate(T > boolean) = recebe um valor como parametro e retorna um boolean
