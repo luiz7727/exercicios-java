@@ -1,0 +1,57 @@
+Java Persistence API(JPA)
+
+
+Persistence eh pegar os dados da aplicacao e manter eles em um banco de dados.
+
+
+DATA MAPPER(Padrao pelo JPA)(padrao do spring botot)
+
+Objeto1,Objeto2 - tabela1,tabela2
+Um atributo vira uma coluna no banco de dados.
+
+
+classe Produto:
+	Atributo...
+	
+Essa classe esta sendo mapeada para essa tabela no banco de dados, o nome da Classe eh uma tabela no banco de dados.E cada atributo que tiver na classe, vira uma coluna.	
+
+Active Record:
+Tem um proprio objeto responsavel com todos os metodos para interagir com a camada de persistencia(banco de dados), e isso eh feita por heranca.
+Muito encontrado em frameworks do php, como laravel, ruby on rails e etc.
+
+A propria entidade, o proprio objeto tem uma relacao com determinada tabela do banco de dados.
+Ele vai ter dentro dele, todos os metodos necessarios para se persistir.
+
+Cliente c =.... vai ser mapeado para um registro ou uma linha no banco de dados 
+
+c.save()
+cliente.find()
+
+O nome da classe vira o nome da tabela no banco de dados
+
+Vc tem uma determinada classe, que tem as funcionalidades,save, insert, update, saveById, find e etc.E a partir disso vc tem uma heranca, na classe cliente, produto e etc
+
+
+ORM(Mapeamento objeto relacional)
+Object Relational Mapper
+
+
+O.O(Orientado a objeto)
+classe Produto:
+	Atributos:
+	
+E/R(Entidade relacional)
+A partir do momento em que eu defino uma classe no E/R, vai ter uma tabela com linhas e colunas.
+
+Como mapear uma classe em uma tabela ? Conceito de annotation
+
+@Table(nome=nome_tabela)
+Se colocar em algum atributo @Id significa que sera ali colocado a chave primaria
+@GeneratedValue() como eu quero que a chave primaria seje incrementada ou gerada.
+
+@Column(name=nomeColuna)Nao necessario, pois todo atributo por padrao eh gerado na coluna com o mesmo nome
+
+E automaticamente intero, o jpa vai transformar o objeto mapeado em comandos sql.
+
+ORM eh basicamente fazer a comunicacao de um objeto(classe) com o banco de dados.No exemplo acima, foi pelo conceito da annotation.
+
