@@ -55,3 +55,7 @@ E automaticamente intero, o jpa vai transformar o objeto mapeado em comandos sql
 
 ORM eh basicamente fazer a comunicacao de um objeto(classe) com o banco de dados.No exemplo acima, foi pelo conceito da annotation.
 
+@Transient
+public String nome;
+
+essa anotation serve paraa não criar esse atributo como coluna no banco de dados.
